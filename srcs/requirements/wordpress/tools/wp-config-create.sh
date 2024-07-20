@@ -1,0 +1,34 @@
+#!/bin/bash
+
+# WordPressディレクトリの存在を確認し、存在しない場合は作成
+if [ ! -d "/var/www/html/wordpress" ]; then
+    mkdir -p /var/www/html/wordpress
+    chown www-data:www-data /var/www/html/wordpress
+fi
+
+# 環境変数を使用してwp-config.phpを生成
+cat <<EOF > /var/www/html/wordpress/wp-config.php
+<?php
+define('DB_NAME', '${WORDPRESS_DB_NAME}');
+define('DB_USER', '${WORDPRESS_DB_USER}');
+define('DB_PASSWORD', '${WORDPRESS_DB_PASSWORD}');
+define('DB_HOST', '${WORDPRESS_DB_HOST}');
+define('DB_CHARSET', 'utf8');
+define('DB_COLLATE', '');
+define('AUTH_KEY', 'put your unique phrase here');
+define('SECURE_AUTH_KEY', 'put your unique phrase here');
+define('LOGGED_IN_KEY', 'put your unique phrase here');
+define('NONCE_KEY', 'put your unique phrase here');
+define('AUTH_SALT', 'put your unique phrase here');
+define('SECURE_AUTH_SALT', 'put your unique phrase here');
+define('LOGGED_IN_SALT', 'put your unique phrase here');
+define('NONCE_SALT', 'put your unique phrase here');
+\$table_prefix = 'wp_';
+define('WP_DEBUG', false);
+if ( !defined('ABSPATH') )
+    define('ABSPATH', dirname(__FILE__) . '/');
+require_once(ABSPATH . 'wp-settings.php');
+EOF
+
+# 正しい所有権を設定
+chown www-data:www-data /var/www/html/wordpress/wp-config.php
