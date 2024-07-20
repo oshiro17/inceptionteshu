@@ -1,7 +1,8 @@
 all: up
 
 up:
-	mkdir -p srcs/volumes/{mariadb_data,wordpress_data}
+	mkdir -p srcs/volumes/mariadb_data
+	mkdir -p srcs/volumes/wordpress_data
 	docker-compose -f srcs/docker-compose.yml up -d
 
 down:

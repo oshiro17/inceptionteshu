@@ -1,0 +1,23 @@
+240720 14:05:44 mysqld_safe Starting mariadbd daemon with databases from /var/lib/mysql
+2024-07-20 14:05:44 0 [Note] Starting MariaDB 10.5.23-MariaDB-0+deb11u1 source revision 6cfd2ba397b0ca689d8ff1bdb9fc4a4dc516a5eb as process 86
+2024-07-20 14:05:44 0 [Note] InnoDB: Uses event mutexes
+2024-07-20 14:05:44 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2024-07-20 14:05:44 0 [Note] InnoDB: Number of pools: 1
+2024-07-20 14:05:44 0 [Note] InnoDB: Using ARMv8 crc32 + pmull instructions
+2024-07-20 14:05:44 0 [Note] mariadbd: O_TMPFILE is not supported on /tmp (disabling future attempts)
+2024-07-20 14:05:44 0 [Note] InnoDB: Using Linux native AIO
+2024-07-20 14:05:44 0 [Note] InnoDB: Initializing buffer pool, total size = 134217728, chunk size = 134217728
+2024-07-20 14:05:44 0 [Note] InnoDB: Completed initialization of buffer pool
+2024-07-20 14:05:44 0 [Note] InnoDB: 128 rollback segments are active.
+2024-07-20 14:05:44 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-07-20 14:05:44 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-07-20 14:05:44 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+2024-07-20 14:05:44 0 [Note] InnoDB: 10.5.23 started; log sequence number 45091; transaction id 20
+2024-07-20 14:05:44 0 [Note] Plugin 'FEEDBACK' is disabled.
+2024-07-20 14:05:44 0 [Note] InnoDB: Loading buffer pool(s) from /var/lib/mysql/ib_buffer_pool
+2024-07-20 14:05:44 0 [Note] InnoDB: Buffer pool(s) load completed at 240720 14:05:44
+2024-07-20 14:05:44 0 [Note] Server socket created on IP: '0.0.0.0'.
+2024-07-20 14:05:44 0 [Note] Reading of all Master_info entries succeeded
+2024-07-20 14:05:44 0 [Note] Added new Master_info '' to hash table
+2024-07-20 14:05:44 0 [Note] /usr/sbin/mariadbd: ready for connections.
+Version: '10.5.23-MariaDB-0+deb11u1'  socket: '/run/mysqld/mysqld.sock'  port: 3306  Debian 11

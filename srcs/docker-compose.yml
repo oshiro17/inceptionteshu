@@ -48,13 +48,13 @@ volumes:
     driver_opts:
       type: none
       o: bind
-      device: ./volumes/mariadb_data
+      device: /home/debian/inceptionteshu/srcs/volumes/mariadb_data
   wordpress_data:
     driver: local
     driver_opts:
       type: none
       o: bind
-      device: ./volumes/wordpress_data
+      device: /home/debian/inceptionteshu/srcs/volumes/wordpress_data
 
 networks:
   inception_network:
